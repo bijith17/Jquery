@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+      .word{
+          background-color: rgb(131, 118, 118);
+          color: white;
+          width: 300px;
+          height: 100px;
+      }
+  </style>
+</head>
+<body>
+
+    <button class="slideup">slide up</button>
+    <button class="slidedown">slidedown </button>
+    <button class="slidetoggle">slidetoggle </button>
+    <button class="stop">stop </button>
+
+    <div class="word">
+
+        this is a slide hurry up!!!!
+    </div>
+    
+    <script>
+        $(document).ready(function()
+        {
+            $(".slideup").click(function()
+            {
+                $(".word").slideUp(4000);
+            });
+
+            $(".slidedown").click(function()
+            {
+                $(".word").slideDown(4000);
+            });
+
+            $(".slidetoggle").click(function()
+            {
+                $(".word").slideToggle(4000);
+            });
+            $(".stop").click(function()
+            {
+                $(".word").stop(4000);
+            });
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>animation</title> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<button class="ani">animation</button>
+<div style="background-color: red; height: 100px; width: 100px;position: absolute;">hello</div>
+<br><br><br><br><br><br>
+
+<button class="call">callback</button>
+<p>this is a chaining function</p>
+
+<button class="chaining">chaining</button>
+<h1>chaining</h1>
+
+<script>
+    $(document).ready(function(){
+       $(".call").click(function()
+       {
+           $("p").hide("slow",function(){
+               alert("Hide");
+           })
+       })
+
+    $(".chaining").click(function()
+    {
+        $("h1").slideUp(3000).css("color","red") .slideDown(2000);
+    });
+    });
+</script>
+
+<script>
+    $(document).ready(function()
+    {
+        $(".ani").click(function()
+        {
+            $("div").animate({left:'250px'});
+        });
+    });
+    
+</script>
+
+    
+</body>
+</html>

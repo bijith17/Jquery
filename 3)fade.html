@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>fade</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+      div{
+          width: 100px;
+          height: 100px;
+          background-color: rgb(165, 11, 11);
+          color: white;
+      }
+  </style>
+</head>
+<body>
+<button class="fadein">fadein</button>
+<button class="fadeout">fadeout</button>
+<button class="fadetoggle">fadetoggle</button>
+<div id="1">1</div><br>
+<div id="2">2-slow</div><br>
+<div id="3">3-5000</div><br>
+
+
+<script>
+$(document).ready(function()
+{
+    $(".fadein").click(function()
+    {
+        $("#1").fadeIn();
+        $("#2").fadeIn("slow");
+        $("#3").fadeIn(4000);
+    });
+    $(".fadeout").click(function()
+    {
+        $("#1").fadeOut();
+        $("#2").fadeOut("slow");
+        $("#3").fadeOut(4000);
+    });
+    $(".fadetoggle").click(function()
+    {
+        $("#1").fadeToggle();
+        $("#2").fadeToggle("slow");
+        $("#3").fadeToggle(4000);
+    });
+    
+});
+
+</script>
+    
+</body>
+</html>
